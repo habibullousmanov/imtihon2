@@ -38,7 +38,7 @@ const projects = [
   },
 ]
 
-function profile({ onSwitch }) {
+function Profile({ onSwitch }) {
   return (
     <div className="profile-layout">
       <aside className="profile-sidebar">
@@ -252,5 +252,5 @@ function profile({ onSwitch }) {
   )
 }
 
-export default profile
+export default Profile
 
