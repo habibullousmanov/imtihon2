@@ -68,7 +68,7 @@ function profile({ onSwitch }) {
           </button>
         </nav>
 
-        <div className="profile-nav-label">Account Pages</div>
+        <div className="profile-nav-label">Account Pages</div> 
 
         <nav className="profile-nav secondary">
           <button type="button" className="active" onClick={() => onSwitch('profile')}>
@@ -245,7 +245,7 @@ function profile({ onSwitch }) {
         </section>
 
         <footer className="profile-footer">
-          © 2021, Made with love by Creative Tim and Simmmple for a better web
+          ï¿½ 2021, Made with love by Creative Tim and Simmmple for a better web
         </footer>
       </main>
     </div>

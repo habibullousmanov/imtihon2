@@ -1,41 +1,38 @@
-import React, { useState } from 'react'
-
-import Signup from './pages/sing up/signup'
+import React from 'react'
+import { Navigate, Route, Routes, useNavigate } from 'react-router-dom'
+import Signup from './pages/sing up/Signup'
 import Sign from './pages/sing in/Sign'
-import Profile from './pages/profile/profile'
+import Profile from './pages/profile/Profile'
 import Billing from './pages/billing/Billing'
 import Table from './pages/table/Table'
 import Dashboard from './pages/dashboard/Dashboard'
 
+const pageRoutes = {
+  signup: '/signup',
+  sign: '/signin',
+  dashboard: '/dashboard',
+  profile: '/profile',
+  table: '/table',
+  billing: '/billing',
+}
+
 export default function App() {
-  const [page, setPage] = useState('signup')
+  const navigate = useNavigate()
 
   const handleSwitch = (target) => {
-    if (!target) return setPage('sign')
-      
-    setPage(target)
+    navigate(pageRoutes[target] ?? pageRoutes.sign)
   }
 
-  switch (page) {
-    case 'signup':
-      return <Signup onSwitch={handleSwitch} />
-
-    case 'sign':
-      return <Sign onSwitch={handleSwitch} />
-
-    case 'dashboard':
-      return <Dashboard onSwitch={handleSwitch} />
-
-    case 'profile':
-      return <Profile onSwitch={handleSwitch} />
-
-    case 'table':
-      return <Table onSwitch={handleSwitch} />
-
-    case 'billing':
-      return <Billing onSwitch={handleSwitch} />
-
-    default:
-      return <Signup onSwitch={handleSwitch} />
-  }
+  return (
+    <Routes>
+      <Route path="/" element={<Navigate to="/signup" replace />} />
+      <Route path="/signup" element={<Signup onSwitch={handleSwitch} />} />
+      <Route path="/signin" element={<Sign onSwitch={handleSwitch} />} />
+      <Route path="/dashboard" element={<Dashboard onSwitch={handleSwitch} />} />
+      <Route path="/profile" element={<Profile onSwitch={handleSwitch} />} />
+      <Route path="/table" element={<Table onSwitch={handleSwitch} />} />
+      <Route path="/billing" element={<Billing onSwitch={handleSwitch} />} />
+      <Route path="*" element={<Navigate to="/signup" replace />} />
+    </Routes>
+  )
 }
