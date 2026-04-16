@@ -1,11 +1,11 @@
 import React from 'react'
 import { Navigate, Route, Routes, useNavigate } from 'react-router-dom'
-import Signup from './pages/singup/Signup'
-import Sign from './pages/singIn/Sign'
-import Profile from './pages/profile/Profile'
-import Billing from './pages/billing/Billing'
-import Table from './pages/table/Table'
-import Dashboard from './pages/dashboard/Dashboard'
+import Signup from './pages/singup/Signup.jsx'
+import Sign from './pages/singIn/Sign.jsx'
+import Profile from './pages/profile/Profile.jsx'
+import Billing from './pages/billing/Billing.jsx' 
+import Table from './pages/table/Table.jsx'
+import Dashboard from './pages/dashboard/Dashboard.jsx'
 
 const pageRoutes = {
   signup: '/signup',

@@ -12,7 +12,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-
+import icon1 from "../../assets/img/img/svg/icon1.svg"
 const statCards = [
   { title: "Today's Money", value: "$53,000", change: "+55%", icon: "$" },
   { title: "Today's Users", value: "2,300", change: "+5%", icon: "U" },
@@ -34,7 +34,7 @@ const sidebarAccount = [
 ];
 
 const activeUsers = [
-  { name: "01", users: 320 },
+  { name: icon1, users: 320 },
   { name: "02", users: 210 },
   { name: "03", users: 280 },
   { name: "04", users: 190 },
@@ -63,20 +63,53 @@ const userStats = [
 ];
 
 const projects = [
-  { name: "Chakra Soft UI Version", members: 5, budget: "$14,000", completion: 60 },
+  {
+    name: "Chakra Soft UI Version",
+    members: 5,
+    budget: "$14,000",
+    completion: 60,
+  },
   { name: "Add Progress Track", members: 2, budget: "$3,000", completion: 10 },
-  { name: "Fix Platform Errors", members: 2, budget: "Not set", completion: 100 },
-  { name: "Launch our Mobile App", members: 5, budget: "$32,000", completion: 100 },
-  { name: "Add the New Pricing Page", members: 4, budget: "$400", completion: 25 },
-  { name: "Redesign New Online Shop", members: 4, budget: "$7,600", completion: 40 },
+  {
+    name: "Fix Platform Errors",
+    members: 2,
+    budget: "Not set",
+    completion: 100,
+  },
+  {
+    name: "Launch our Mobile App",
+    members: 5,
+    budget: "$32,000",
+    completion: 100,
+  },
+  {
+    name: "Add the New Pricing Page",
+    members: 4,
+    budget: "$400",
+    completion: 25,
+  },
+  {
+    name: "Redesign New Online Shop",
+    members: 4,
+    budget: "$7,600",
+    completion: 40,
+  },
 ];
 
 const orders = [
   { title: "$2400, Design changes", time: "22 DEC 7:20 PM", tone: "green" },
   { title: "New order #4219423", time: "21 DEC 11:21 PM", tone: "red" },
   { title: "Server Payments for April", time: "21 DEC 9:28 PM", tone: "blue" },
-  { title: "New card added for order #3210145", time: "20 DEC 3:52 PM", tone: "orange" },
-  { title: "Unlock packages for Development", time: "19 DEC 11:35 PM", tone: "purple" },
+  {
+    title: "New card added for order #3210145",
+    time: "20 DEC 3:52 PM",
+    tone: "orange",
+  },
+  {
+    title: "Unlock packages for Development",
+    time: "19 DEC 11:35 PM",
+    tone: "purple",
+  },
 ];
 
 function Dashboard({ onSwitch }) {
@@ -108,7 +141,11 @@ function Dashboard({ onSwitch }) {
 
         <nav className="sidebar-nav secondary">
           {sidebarAccount.map((item) => (
-            <button key={item.label} type="button" onClick={() => onSwitch?.(item.key)}>
+            <button
+              key={item.label}
+              type="button"
+              onClick={() => onSwitch?.(item.key)}
+            >
               <span className="nav-icon">{item.label.slice(0, 1)}</span>
               <span>{item.label}</span>
             </button>
@@ -149,7 +186,11 @@ function Dashboard({ onSwitch }) {
               <div>
                 <p>{card.title}</p>
                 <h3>{card.value}</h3>
-                <span className={card.change.startsWith("-") ? "negative" : "positive"}>
+                <span
+                  className={
+                    card.change.startsWith("-") ? "negative" : "positive"
+                  }
+                >
                   {card.change}
                 </span>
               </div>
@@ -160,20 +201,23 @@ function Dashboard({ onSwitch }) {
 
         <section className="hero-grid">
           <article className="hero-card intro-card">
-            <p className="eyebrow">Built by developers</p>
-            <h2>Purity UI Dashboard</h2>
-            <p className="hero-copy">
-              From colors, cards, typography to complex elements, you will find
-              the full documentation.
-            </p>
-            <button type="button">Read more</button>
-          </article>
-
-          <article className="hero-card chakra-card">
-            <div className="chakra-badge">C</div>
             <div>
-              <h3>chakra</h3>
-              <p>Clean dashboard blocks with a smooth teal gradient.</p>
+              <p className="eyebrow">Built by developers</p>
+              <h3>Purity UI Dashboard</h3>
+              <p className="hero-copy">
+                From colors, cards, typography to complex elements, you will
+                find the full documentation.
+              </p>
+              <button type="button">Read more</button>
+            </div>
+            <div>
+              <article className="hero-card chakra-card">
+                <div className="chakra-badge">C</div>
+                <div>
+                  <h3>chakra</h3>
+                  <p>Clean dashboard blocks with a smooth teal gradient.</p>
+                </div>
+              </article>
             </div>
           </article>
 
@@ -194,7 +238,12 @@ function Dashboard({ onSwitch }) {
             <div className="panel-chart">
               <ResponsiveContainer width="100%" height={180}>
                 <BarChart data={activeUsers} barCategoryGap="34%">
-                  <XAxis dataKey="name" tickLine={false} axisLine={false} stroke="#94a3b8" />
+                  <XAxis
+                    dataKey="name"
+                    tickLine={false}
+                    axisLine={false}
+                    stroke="#94a3b8"
+                  />
                   <YAxis hide />
                   <Tooltip cursor={{ fill: "rgba(255,255,255,0.04)" }} />
                   <Bar dataKey="users" fill="#ffffff" radius={[8, 8, 0, 0]} />
@@ -212,7 +261,9 @@ function Dashboard({ onSwitch }) {
             <div className="mini-stats">
               {userStats.map((item) => (
                 <div className="mini-stat" key={item.label}>
-                  <div className={`mini-icon ${item.accent}`}>{item.label.slice(0, 1)}</div>
+                  <div className={`mini-icon ${item.accent}`}>
+                    {item.label.slice(0, 1)}
+                  </div>
                   <div>
                     <span>{item.label}</span>
                     <strong>{item.value}</strong>
@@ -236,15 +287,42 @@ function Dashboard({ onSwitch }) {
                   <defs>
                     <linearGradient id="visitsFill" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="5%" stopColor="#7ce7db" stopOpacity={0.5} />
-                      <stop offset="95%" stopColor="#7ce7db" stopOpacity={0.05} />
+                      <stop
+                        offset="95%"
+                        stopColor="#7ce7db"
+                        stopOpacity={0.05}
+                      />
                     </linearGradient>
-                    <linearGradient id="revenueFill" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#1e293b" stopOpacity={0.18} />
-                      <stop offset="95%" stopColor="#1e293b" stopOpacity={0.02} />
+                    <linearGradient
+                      id="revenueFill"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="5%"
+                        stopColor="#1e293b"
+                        stopOpacity={0.18}
+                      />
+                      <stop
+                        offset="95%"
+                        stopColor="#1e293b"
+                        stopOpacity={0.02}
+                      />
                     </linearGradient>
                   </defs>
-                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                  <XAxis dataKey="name" tickLine={false} axisLine={false} stroke="#94a3b8" />
+                  <CartesianGrid
+                    strokeDasharray="3 3"
+                    vertical={false}
+                    stroke="#e2e8f0"
+                  />
+                  <XAxis
+                    dataKey="name"
+                    tickLine={false}
+                    axisLine={false}
+                    stroke="#94a3b8"
+                  />
                   <YAxis tickLine={false} axisLine={false} stroke="#94a3b8" />
                   <Tooltip />
                   <Area
@@ -263,7 +341,13 @@ function Dashboard({ onSwitch }) {
                     fill="url(#revenueFill)"
                     strokeWidth={2}
                   />
-                  <Line type="monotone" dataKey="visits" stroke="#67e8f9" dot={false} strokeWidth={2} />
+                  <Line
+                    type="monotone"
+                    dataKey="visits"
+                    stroke="#67e8f9"
+                    dot={false}
+                    strokeWidth={2}
+                  />
                 </AreaChart>
               </ResponsiveContainer>
             </div>
@@ -290,12 +374,14 @@ function Dashboard({ onSwitch }) {
               {projects.map((project) => (
                 <div className="project-row" key={project.name}>
                   <div className="project-company">
-                    <div className="company-logo">{project.name.slice(0, 1)}</div>
+                    <div className="company-logo">
+                      {project.name.slice(0, 1)}
+                    </div>
                     <strong>{project.name}</strong>
                   </div>
                   <div className="members-stack">
-                    {Array.from({ length: project.members }).map((_, index) => (
-                      <span key={`${project.name}-${index}`}>{index + 1}</span>
+                    {Array.from({ length: activeUsers.members }).map((_, index) => (
+<img src={`${project.name}-${index}`} alt="" />                     
                     ))}
                   </div>
                   <span className="budget">{project.budget}</span>
@@ -323,7 +409,8 @@ function Dashboard({ onSwitch }) {
                 <div className="order-item" key={order.title}>
                   <div className={`order-dot ${order.tone}`} />
                   <div>
-                    <strong>{order.title}</strong>
+                    <strong>{order.title} </strong>
+
                     <p>{order.time}</p>
                   </div>
                 </div>

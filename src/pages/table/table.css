@@ -7,6 +7,7 @@
   background: #fff;
   border: 1px solid #e6eef8;
   border-radius: 22px;
+  width: 100%;
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
   padding: 20px 22px;
 }
@@ -37,14 +38,14 @@
 .authors-table,
 .projects-table {
   width: 100%;
-  border-collapse: collapse;
+justify-content: space-between;
 }
 
 .authors-table th,
 .authors-table td,
 .projects-table th,
 .projects-table td {
-  padding: 14px 10px;
+  padding: 24px 10px;
   text-align: left;
   border-bottom: 1px solid #edf2f7;
   vertical-align: middle;
@@ -53,16 +54,16 @@
 .authors-table th,
 .projects-table th {
   color: #a0aec0;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
 }
 
 .authors-table td,
 .projects-table td {
   color: #4a5568;
-  font-size: 0.88rem;
+  font-size: 0.97rem;
 }
 
 .author-cell,
@@ -83,12 +84,16 @@
   font-weight: 800;
   font-size: 0.74rem;
 }
-
+.projects-table{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 .authors-table strong,
 .projects-table strong {
   display: block;
   color: #2d3748;
-  font-size: 0.84rem;
+  font-size: 1rem;
 }
 
 .authors-table p {
@@ -126,8 +131,9 @@
 }
 
 .company-dot {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  margin-right: 10px;
+  height: 20px;
   border-radius: 50%;
   background: linear-gradient(135deg, #68dcd1, #4fd1c5);
   flex-shrink: 0;

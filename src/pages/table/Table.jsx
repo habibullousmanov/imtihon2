@@ -44,8 +44,8 @@ function Table({ onSwitch }) {
             Billing
           </button>
           <button type="button" onClick={() => onSwitch('profile')}>
-            <span>P</span>
-            Profile
+            <span>R</span>
+            RTL
           </button>
         </nav>
 
@@ -193,7 +193,7 @@ function Table({ onSwitch }) {
         </section>
 
         <footer className="profile-footer">
-          © 2021, Made with love by Creative Tim and Simmmple for a better web
+          ï¿½ 2021, Made with love by Creative Tim and Simmmple for a better web
         </footer>
       </main>
     </div>

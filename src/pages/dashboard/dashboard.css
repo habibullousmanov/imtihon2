@@ -296,14 +296,16 @@
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.9fr) minmax(0, 1.25fr);
+  grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.1fr) minmax(0, 0.65fr);
   gap: 16px;
 }
 
 .hero-card {
-  min-height: 168px;
+  min-height: 208px;
   padding: 22px;
   position: relative;
+  display: flex;
+  width: 700px;
   overflow: hidden;
 }
 
@@ -329,6 +331,7 @@
   max-width: 28rem;
   color: var(--text-muted);
   line-height: 1.6;
+  font-size: 0.9rem;
 }
 
 .intro-card button,
@@ -346,6 +349,7 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
+  width: 335px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0)),
     linear-gradient(135deg, #68dcd1 0%, #4fd1c5 100%);
@@ -375,6 +379,9 @@
     url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80")
       center/cover;
   color: #fff;
+  width: 500px;
+  height: 270px;
+  margin-left: 40px;
 }
 
 .rocket-overlay {
@@ -399,10 +406,9 @@
   color: #fff;
 }
 
-.chart-grid,
-.bottom-grid {
+.chart-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 2fr);
+  grid-template-columns: minmax(0,4.1fr) minmax(0, 4fr);
   gap: 16px;
 }
 
@@ -413,6 +419,7 @@
 .dark-panel {
   background: linear-gradient(180deg, #0f1535 0%, #1a2758 100%);
   color: #fff;
+  width: 600px;
 }
 
 .panel-header {
@@ -424,17 +431,17 @@
 }
 
 .panel-header.compact {
-  margin-bottom: 16px;
+  margin-bottom: 26px;
 }
 
 .panel-header h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .panel-header p {
   margin: 6px 0 0;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
 }
 
 .dark-panel .panel-header p {
@@ -501,7 +508,6 @@
 .light-panel .panel-header p {
   color: var(--green);
 }
-
 .sales-chart {
   margin-top: 4px;
 }
@@ -613,19 +619,20 @@
 
 .orders-list {
   display: grid;
-  gap: 18px;
+  gap: 58px;
+  font-size: 2rem;
 }
 
 .order-item {
   display: grid;
   grid-template-columns: 10px minmax(0, 1fr);
-  gap: 12px;
+  gap: 30px;
   align-items: flex-start;
 }
 
 .order-dot {
-  width: 10px;
-  height: 10px;
+  width: 25px;
+  height: 25px;
   margin-top: 6px;
   border-radius: 50%;
 }
@@ -653,25 +660,29 @@
 .order-item strong {
   display: block;
   color: var(--text-main);
-  font-size: 0.92rem;
+  font-size: 0.99rem;
 }
 
 .order-item p {
   margin: 6px 0 0;
   color: var(--text-soft);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
 }
-
+.bottom-grid{
+  display: grid;
+   grid-template-columns: minmax(0,6fr) minmax(0, 4fr);
+   gap: 20px;
+}
 @media (max-width: 1280px) {
   .stats-grid,
   .hero-grid,
   .chart-grid,
   .bottom-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4 minmax(0, 2fr));
   }
 
   .hero-grid .intro-card {
-    grid-column: 1 / -1;
+    grid-column: 2 / -1;
   }
 }
 

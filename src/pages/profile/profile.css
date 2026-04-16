@@ -187,7 +187,7 @@
 
 .profile-topbar h1 {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .profile-top-actions {
@@ -253,7 +253,7 @@
 
 .hero-wave-one {
   width: 700px;
-  height: 260px;
+  height: 420px;
   top: -60px;
   right: -120px;
   transform: rotate(-8deg);
@@ -261,14 +261,14 @@
 
 .hero-wave-two {
   width: 680px;
-  height: 320px;
+  height: 420px;
   top: 18px;
   right: -20px;
   transform: rotate(6deg);
 }
 
 .hero-profile-card {
-  margin: -24px 18px 0;
+  margin: -64px 18px 0;
   padding: 16px 18px;
   display: flex;
   align-items: center;
@@ -281,12 +281,12 @@
 .hero-identity {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 24px;
 }
 
 .hero-avatar {
-  width: 58px;
-  height: 58px;
+  width: 78px;
+  height: 78px;
   border-radius: 16px;
   display: grid;
   place-items: center;
@@ -298,24 +298,24 @@
 
 .hero-identity h2 {
   margin: 0 0 4px;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .hero-identity p {
   margin: 0;
   color: var(--soft);
-  font-size: 0.82rem;
+  font-size: 0.86rem;
 }
 
 .hero-actions {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .profile-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 2fr));
   gap: 16px;
 }
 
@@ -329,14 +329,14 @@
 
 .card-head h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .card-head p,
 .settings-caption {
   margin: 6px 0 0;
   color: var(--soft);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -346,23 +346,25 @@
   display: grid;
   gap: 14px;
 }
-
+.settings-group{
+  width: 340px;
+}
 .setting-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 14px;
 }
 
 .setting-row span {
   color: var(--soft);
-  font-size: 0.82rem;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
 .setting-row input {
-  width: 34px;
-  height: 18px;
+  width: 44px;
+  height: 20px;
   accent-color: var(--teal-dark);
 }
 
@@ -384,7 +386,7 @@
 
 .profile-info-list div {
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.9rem;
 }
 
 .profile-info-list span {
@@ -402,14 +404,14 @@
 
 .conversation-item {
   display: grid;
-  grid-template-columns: 40px minmax(0, 1fr) auto;
+  grid-template-columns: 60px minmax(0, 1fr) auto;
   gap: 10px;
   align-items: center;
 }
 
 .conversation-avatar {
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   border-radius: 12px;
   display: grid;
   place-items: center;
@@ -441,7 +443,7 @@
 }
 
 .projects-section {
-  padding: 20px;
+  padding: 30px;
 }
 
 .projects-head {
@@ -450,13 +452,13 @@
 
 .projects-head h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .projects-head p {
   margin: 6px 0 0;
   color: var(--soft);
-  font-size: 0.82rem;
+  font-size: 0.86rem;
 }
 
 .project-grid {
@@ -471,7 +473,8 @@
 }
 
 .project-image {
-  height: 128px;
+  height: 158px;
+  width: 330px;
   background:
     linear-gradient(135deg, rgba(17, 28, 68, 0.22), rgba(17, 28, 68, 0.02)),
     linear-gradient(135deg, #cbd5e0 0%, #edf2f7 100%);
@@ -502,19 +505,19 @@
 .project-company {
   display: inline-block;
   color: var(--soft);
-  font-size: 0.74rem;
+  font-size: 0.80rem;
   margin-bottom: 8px;
 }
 
 .project-body h4 {
   margin: 0;
-  font-size: 0.96rem;
+  font-size: 1.2rem;
 }
 
 .project-body p {
   margin: 8px 0 14px;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   line-height: 1.6;
 }
 

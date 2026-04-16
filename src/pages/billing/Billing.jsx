@@ -41,8 +41,8 @@ function Billing({ onSwitch }) {
             Billing
           </button>
           <button type="button" onClick={() => onSwitch('profile')}>
-            <span>P</span>
-            Profile
+            <span>R</span>
+            RTL
           </button>
         </nav>
 
@@ -118,7 +118,6 @@ function Billing({ onSwitch }) {
               <strong>$2,500</strong>
               <p>Bank account balance</p>
             </article>
-
             <article className="billing-card mini">
               <span className="mini-label">PayPal</span>
               <strong>$4,300</strong>
