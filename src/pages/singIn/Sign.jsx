@@ -65,7 +65,7 @@ function Sign({ onSwitch }) {
         </main>
 
         <footer className="signin-footer">
-          <span>© 2021, Made with love by Creative Tim and Simmmple</span>
+          <span>2021, Made with love by Creative Tim and Simmmple</span>
           <div>
             <button type="button">Creative Tim</button>
             <button type="button">Simmmple</button>
