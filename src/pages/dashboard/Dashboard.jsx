@@ -12,10 +12,18 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import icon1 from "../../assets/img/img/svg/icon1.svg"
+import icon1 from "../../assets/img/img/png/avatar1.png";
+import icon2 from "../../assets/img/img/png/avatar2.png";
+import icon3 from "../../assets/img/img/png/avatar4.png";
+import icon4 from "../../assets/img/img/png/avatar5.png";
+import html from "../../assets/img/img/svg/html.svg";
+import bell from "../../assets/img/img/svg/card.svg";
+import icon from "../../assets/img/img/svg/icon1.svg";
+import wallet from "../../assets/img/img/svg/wallet.svg";
+import  braw from "../../assets/img/img/svg/braw.svg"
 const statCards = [
-  { title: "Today's Money", value: "$53,000", change: "+55%", icon: "$" },
-  { title: "Today's Users", value: "2,300", change: "+5%", icon: "U" },
+  { title: "Today's Money", value: "$53,000", change: "+55%", img: wallet },
+  { title: "Today's Users", value: "2,300", change: "+5%",  img:braw },
   { title: "New Clients", value: "+3,052", change: "-14%", icon: "N" },
   { title: "Total Sales", value: "$173,00 0", change: "+8%", icon: "S" },
 ];
@@ -68,49 +76,72 @@ const projects = [
     members: 5,
     budget: "$14,000",
     completion: 60,
-     membersImages: [icon1, icon1, icon1, icon1, icon1]
+    membersImages: [icon1],
   },
-  { name: "Add Progress Track", members: 2, budget: "$3,000", completion: 10, membersImages: [icon1, icon1, icon1, icon1, icon1]  },
+  {
+    name: "Add Progress Track",
+    members: 2,
+    budget: "$3,000",
+    completion: 10,
+    membersImages: [icon2],
+  },
   {
     name: "Fix Platform Errors",
     members: 2,
     budget: "Not set",
     completion: 100,
-     membersImages: [icon1, icon1, icon1, icon1, icon1] 
+    membersImages: [icon2],
   },
   {
     name: "Launch our Mobile App",
     members: 5,
     budget: "$32,000",
     completion: 100,
-    membersImages: [icon1, icon1, icon1, icon1, icon1]
+    membersImages: [icon3],
   },
   {
     name: "Add the New Pricing Page",
     members: 4,
     budget: "$400",
     completion: 25,
-    membersImages: [icon1, icon1, icon1, icon1, icon1] 
+    membersImages: [icon4],
   },
   {
     name: "Redesign New Online Shop",
     members: 4,
     budget: "$7,600",
     completion: 40,
-    membersImages: [icon1, icon1, icon1, icon1, icon1] 
+    membersImages: [icon2],
   },
 ];
 
 const orders = [
-  { title: "$2400, Design changes", time: "22 DEC 7:20 PM", tone: "green" },
-  { title: "New order #4219423", time: "21 DEC 11:21 PM", tone: "red" },
-  { title: "Server Payments for April", time: "21 DEC 9:28 PM", tone: "blue" },
   {
+    img: html,
+    title: "$2400, Design changes",
+    time: "22 DEC 7:20 PM",
+    tone: "green",
+  },
+  {
+    img: html,
+    title: "New order #4219423",
+    time: "21 DEC 11:21 PM",
+    tone: "red",
+  },
+  {
+    img: html,
+    title: "Server Payments for April",
+    time: "21 DEC 9:28 PM",
+    tone: "blue",
+  },
+  {
+    img: bell,
     title: "New card added for order #3210145",
     time: "20 DEC 3:52 PM",
     tone: "orange",
   },
   {
+    img: icon,
     title: "Unlock packages for Development",
     time: "19 DEC 11:35 PM",
     tone: "purple",
@@ -186,8 +217,8 @@ function Dashboard({ onSwitch }) {
         </header>
 
         <section className="stats-grid">
-          {statCards.map((card) => (
-            <article className="stat-card" key={card.title}>
+          {statCards.map((card , index) => (
+            <article className="stat-card" key={index}>
               <div>
                 <p>{card.title}</p>
                 <h3>{card.value}</h3>
@@ -195,11 +226,11 @@ function Dashboard({ onSwitch }) {
                   className={
                     card.change.startsWith("-") ? "negative" : "positive"
                   }
-                >
+                >negative
                   {card.change}
                 </span>
               </div>
-              <div className="stat-icon">{card.icon}</div>
+              <img src={card.img} alt="" />
             </article>
           ))}
         </section>
@@ -384,11 +415,16 @@ function Dashboard({ onSwitch }) {
                     </div>
                     <strong>{project.name}</strong>
                   </div>
-<div className="members-box">
-  {project.membersImages?.map((img, i) => (
-    <img key={i} src={img} alt="member" className="member-img" />
-  ))}
-</div>
+                  <div className="members-box">
+                    {project.membersImages?.map((img, i) => (
+                      <img
+                        key={i}
+                        src={img}
+                        alt="member"
+                        className="member-img"
+                      />
+                    ))}
+                  </div>
 
                   <span className="budget">{project.budget}</span>
                   <div className="completion-cell">
@@ -413,9 +449,11 @@ function Dashboard({ onSwitch }) {
             <div className="orders-list">
               {orders.map((order) => (
                 <div className="order-item" key={order.title}>
-                  <div className={`order-dot ${order.tone}`} />
-                  <div>
-                    <strong>{order.title} </strong>
+                  <div className="master  ">
+                    <div className="master2">
+                      <img src={order.img} alt="" />
+                      <strong>{order.title}</strong>
+                    </div>
 
                     <p>{order.time}</p>
                   </div>

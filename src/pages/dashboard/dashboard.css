@@ -32,9 +32,8 @@
 }
 
 .member-img{
-  width:27px;
+  width:87px;
   height:27px;
-  border-radius:50%;
   object-fit:cover;
   margin-left:-8px;
   border:2px solid white;
@@ -295,7 +294,7 @@
 }
 
 .stat-icon {
-  width: 42px;
+  width: 52px;
   height: 42px;
   border-radius: 14px;
   display: grid;
@@ -633,9 +632,16 @@
   gap: 58px;
   font-size: 2rem;
 }
-
+.master2{
+  display: flex;
+  gap: 10px;
+}
+.master{
+  margin-left: 10px;
+}
 .order-item {
   display: grid;
+  display: flex;
   grid-template-columns: 10px minmax(0, 1fr);
   gap: 30px;
   align-items: flex-start;
