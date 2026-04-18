@@ -1,5 +1,6 @@
 import './profile.css'
 
+function Profile({ onSwitch }) {
 const accountSettings = [
   { label: 'Email me when someone follows me', checked: true },
   { label: 'Email me when someone answers on my post', checked: true },
@@ -11,7 +12,6 @@ const appSettings = [
   { label: 'Weekly product updates', checked: false },
   { label: 'Subscribe to newsletter', checked: false },
 ]
-function Profile({ onSwitch }) {
 const conversations = [
   { name: 'Esthera Jackson', message: 'Hi! I need more information...', initials: 'EJ' },
   { name: 'Alexa Liras', message: 'Awesome work, can you change...', initials: 'AL' },
