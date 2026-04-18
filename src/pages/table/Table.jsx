@@ -193,7 +193,7 @@ function Table({ onSwitch }) {
         </section>
 
         <footer className="profile-footer">
-          � 2021, Made with love by Creative Tim and Simmmple for a better web
+          2021, Made with love by Creative Tim and Simmmple for a better web
         </footer>
       </main>
     </div>
