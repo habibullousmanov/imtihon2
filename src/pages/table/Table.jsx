@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Profile/profile.css'
+import '../profile/profile.css'
 import './table.css'
 
 const authors = [

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Profile/profile.css'
+import '../profile/profile.css'
 import './billing.css'
 
 const invoices = [
