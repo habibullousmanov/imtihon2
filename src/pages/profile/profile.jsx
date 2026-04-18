@@ -1,4 +1,3 @@
-import React from 'react'
 import './profile.css'
 
 const accountSettings = [
@@ -12,7 +11,7 @@ const appSettings = [
   { label: 'Weekly product updates', checked: false },
   { label: 'Subscribe to newsletter', checked: false },
 ]
-
+function Profile({ onSwitch }) {
 const conversations = [
   { name: 'Esthera Jackson', message: 'Hi! I need more information...', initials: 'EJ' },
   { name: 'Alexa Liras', message: 'Awesome work, can you change...', initials: 'AL' },
@@ -38,7 +37,6 @@ const projects = [
   },
 ]
 
-function Profile({ onSwitch }) {
   return (
     <div className="profile-layout">
       <aside className="profile-sidebar">
