@@ -17,7 +17,7 @@ const statCards = [
   { title: "Today's Money", value: "$53,000", change: "+55%", icon: "$" },
   { title: "Today's Users", value: "2,300", change: "+5%", icon: "U" },
   { title: "New Clients", value: "+3,052", change: "-14%", icon: "N" },
-  { title: "Total Sales", value: "$173,000", change: "+8%", icon: "S" },
+  { title: "Total Sales", value: "$173,00 0", change: "+8%", icon: "S" },
 ];
 
 const sidebarMain = [
@@ -34,7 +34,7 @@ const sidebarAccount = [
 ];
 
 const activeUsers = [
-  { name: icon1, users: 320 },
+  { name: "01", users: 320 },
   { name: "02", users: 210 },
   { name: "03", users: 280 },
   { name: "04", users: 190 },
@@ -68,31 +68,36 @@ const projects = [
     members: 5,
     budget: "$14,000",
     completion: 60,
+     membersImages: [icon1, icon1, icon1, icon1, icon1]
   },
-  { name: "Add Progress Track", members: 2, budget: "$3,000", completion: 10 },
+  { name: "Add Progress Track", members: 2, budget: "$3,000", completion: 10, membersImages: [icon1, icon1, icon1, icon1, icon1]  },
   {
     name: "Fix Platform Errors",
     members: 2,
     budget: "Not set",
     completion: 100,
+     membersImages: [icon1, icon1, icon1, icon1, icon1] 
   },
   {
     name: "Launch our Mobile App",
     members: 5,
     budget: "$32,000",
     completion: 100,
+    membersImages: [icon1, icon1, icon1, icon1, icon1]
   },
   {
     name: "Add the New Pricing Page",
     members: 4,
     budget: "$400",
     completion: 25,
+    membersImages: [icon1, icon1, icon1, icon1, icon1] 
   },
   {
     name: "Redesign New Online Shop",
     members: 4,
     budget: "$7,600",
     completion: 40,
+    membersImages: [icon1, icon1, icon1, icon1, icon1] 
   },
 ];
 
@@ -379,11 +384,12 @@ function Dashboard({ onSwitch }) {
                     </div>
                     <strong>{project.name}</strong>
                   </div>
-                  <div className="members-stack">
-                    {Array.from({ length: activeUsers.members }).map((_, index) => (
-<img src={`${project.name}-${index}`} alt="" />                     
-                    ))}
-                  </div>
+<div className="members-box">
+  {project.membersImages?.map((img, i) => (
+    <img key={i} src={img} alt="member" className="member-img" />
+  ))}
+</div>
+
                   <span className="budget">{project.budget}</span>
                   <div className="completion-cell">
                     <span>{project.completion}%</span>

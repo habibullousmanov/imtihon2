@@ -27,7 +27,18 @@
   background: linear-gradient(180deg, #f7fbff 0%, #f4f8ff 100%);
   color: var(--text-main);
 }
+.members-box{
+  display:flex;
+}
 
+.member-img{
+  width:27px;
+  height:27px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-left:-8px;
+  border:2px solid white;
+}
 .dashboard-shell * {
   box-sizing: border-box;
 }
